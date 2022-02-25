@@ -12,13 +12,12 @@ function search_in_page(){
     else if (mod == ('historia')){
         window.location.href="historia.html";
     }
-    else if (mod=("inico") || mod == ('melia')){
+    else if (mod==("inico") || mod == ('melia')){
         window.location.href="index.html";
     }
 
     else if (mod ==('planifica')) {
         document.location.href='CAMBIO.html';
-        document.scrollTo(0,1500);
     }
     else if (mod !=''){
         document.getElementById('searcher').value ='';
