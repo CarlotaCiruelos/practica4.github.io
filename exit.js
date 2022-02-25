@@ -12,7 +12,7 @@ function search_in_page(){
     else if (mod == ('historia')){
         window.location.href="historia.html";
     }
-    else if (mod==("inico") || mod == ('melia')){
+    else if ( mod == ('melia')){
         window.location.href="index.html";
     }
 
