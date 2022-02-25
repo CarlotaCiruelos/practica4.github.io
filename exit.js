@@ -6,23 +6,18 @@ function search_in_page(){
     if (mod == ('conocenos')) {
         window.location.href="historia.html";
     }
-    else if (mod == ('home') | mod==('trabaja')) {
+    else if (mod==('trabaja')) {
         window.location.href="cuestionario.html";
     }
     else if (mod == ('historia')){
         window.location.href="historia.html";
     }
-    else if (mod == ('noticias')){
-        window.location.href="noticias.html";
+    else if (mod=("inico") || mod == ('melia')){
+        window.location.href="index.html";
     }
-    else if (mod == ('unete')){
-        window.location.href="unete.html";
-    }
-    else if (mod == ('marcas')){
-        window.location.href="marcas.html";
-    }
-    else if (mod ==('recomendaciones')) {
-        document.location.href='cotizaciones.html';
+
+    else if (mod ==('planifica')) {
+        document.location.href='CAMBIO.html';
         document.scrollTo(0,1500);
     }
     else if (mod !=''){
