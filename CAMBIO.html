@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js">
+    </script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+    <title>Cambio de moneda</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <meta http-equiv="X-UA-Compatible" content="IE=9" />
+    <meta charset="utf-8">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+    <title>practica 3 Carlota Ciruelos</title>
+    <link rel="shortcut icon" type="image/x-icon" href="favico.con.jpg">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript" src="exit.js"></script>
+
+</head>
+<body>
+
+
+<!-- Currency Converter  -->
+<div class="container-fluid pt-2 bg-dark text-white text-center">
+    <h1 class="display-1">MELÍA PLANIFICA</h1>
+</div>
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top">
+    <div class="container-fluid">
+        <img src="favico.con.jpg" alt="Avatar Logo" style="width:40px;" class="rounded-pill">
+        </a>
+        <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+             <span class="navbar-toggler-icon"></span>
+         </button>-->
+        <div class="collapse navbar-collapse" id="mynavbar">
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Meliá</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="historia.html">Conócenos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="cuestionario.html">Trabaja con nosotros</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://landings.melia.com/es/emea/earlybooking2021.html">Destinos en rebajas</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="CAMBIO.html">Meliá Planifica</a>
+                </li>
+            </ul>
+            <form class="d-flex">
+                <input id="searcher" class="form-control me-2" type="text" placeholder="Introduce tu búsqueda">
+                <button class="btn btn-primary" onclick="search_in_page()" type="button">Buscar</button>
+            </form>
+        </div>
+    </div>
+</nav>
+
+<div class="container">
+
+    <h6 class="display-6">Cambio de divisa:</h6>
+    <div class="main">
+        <div class="form-group">
+            <label for="oamount">
+                Cantidad a combertir :
+            </label>
+            <input type="text"
+                   class="form-control searchBox"
+                   placeholder="0.00"
+                   id="oamount">
+        </div>
+
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Origen</span>
+                    </div>
+                    <select class="form-control from" id="sel1">
+                        <option value="">Elige una divisa …</option>
+                        <option value="USD">USD</option>
+                        <option value="AED">AED</option>
+                        <option value="ARS">ARS</option>
+                        <option value="AUD">AUD</option>
+                        <option value="BGN">BGN</option>
+                        <option value="BRL">BRL</option>
+                        <option value="BSD">BSD</option>
+                        <option value="CAD">CAD</option>
+                        <option value="CHF">CHF</option>
+                        <option value="CLP">CLP</option>
+                        <option value="CNY">CNY</option>
+                        <option value="COP">COP</option>
+                        <option value="CZK">CZK</option>
+                        <option value="DKK">DKK</option>
+                        <option value="DOP">DOP</option>
+                        <option value="EGP">EGP</option>
+                        <option value="EUR">EUR</option>
+                        <option value="FJD">FJD</option>
+                        <option value="GBP">GBP</option>
+                        <option value="GTQ">GTQ</option>
+                        <option value="HKD">HKD</option>
+                        <option value="HRK">HRK</option>
+                        <option value="HUF">HUF</option>
+                        <option value="IDR">IDR</option>
+                        <option value="ILS">ILS</option>
+                        <option value="INR">INR</option>
+                        <option value="ISK">ISK</option>
+                        <option value="JPY">JPY</option>
+                        <option value="KRW">KRW</option>
+                        <option value="KZT">KZT</option>
+                        <option value="MVR">MVR</option>
+                        <option value="MXN">MXN</option>
+                        <option value="MYR">MYR</option>
+                        <option value="NOK">NOK</option>
+                        <option value="NZD">NZD</option>
+                        <option value="PAB">PAB</option>
+                        <option value="PEN">PEN</option>
+                        <option value="PHP">PHP</option>
+                        <option value="PKR">PKR</option>
+                        <option value="PLN">PLN</option>
+                        <option value="PYG">PYG</option>
+                        <option value="RON">RON</option>
+                        <option value="RUB">RUB</option>
+                        <option value="SAR">SAR</option>
+                        <option value="SEK">SEK</option>
+                        <option value="SGD">SGD</option>
+                        <option value="THB">THB</option>
+                        <option value="TRY">TRY</option>
+                        <option value="TWD">TWD</option>
+                        <option value="UAH">UAH</option>
+                        <option value="UYU">UYU</option>
+                        <option value="ZAR">ZAR</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="col-sm-6">
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Destino</span>
+                    </div>
+                    <select class="form-control to" id="sel2">
+                        <option value="">Elige una divisa …</option>
+                        <option value="USD">USD</option>
+                        <option value="AED">AED</option>
+                        <option value="ARS">ARS</option>
+                        <option value="AUD">AUD</option>
+                        <option value="BGN">BGN</option>
+                        <option value="BRL">BRL</option>
+                        <option value="BSD">BSD</option>
+                        <option value="CAD">CAD</option>
+                        <option value="CHF">CHF</option>
+                        <option value="CLP">CLP</option>
+                        <option value="CNY">CNY</option>
+                        <option value="COP">COP</option>
+                        <option value="CZK">CZK</option>
+                        <option value="DKK">DKK</option>
+                        <option value="DOP">DOP</option>
+                        <option value="EGP">EGP</option>
+                        <option value="EUR">EUR</option>
+                        <option value="FJD">FJD</option>
+                        <option value="GBP">GBP</option>
+                        <option value="GTQ">GTQ</option>
+                        <option value="HKD">HKD</option>
+                        <option value="HRK">HRK</option>
+                        <option value="HUF">HUF</option>
+                        <option value="IDR">IDR</option>
+                        <option value="ILS">ILS</option>
+                        <option value="INR">INR</option>
+                        <option value="ISK">ISK</option>
+                        <option value="JPY">JPY</option>
+                        <option value="KRW">KRW</option>
+                        <option value="KZT">KZT</option>
+                        <option value="MVR">MVR</option>
+                        <option value="MXN">MXN</option>
+                        <option value="MYR">MYR</option>
+                        <option value="NOK">NOK</option>
+                        <option value="NZD">NZD</option>
+                        <option value="PAB">PAB</option>
+                        <option value="PEN">PEN</option>
+                        <option value="PHP">PHP</option>
+                        <option value="PKR">PKR</option>
+                        <option value="PLN">PLN</option>
+                        <option value="PYG">PYG</option>
+                        <option value="RON">RON</option>
+                        <option value="RUB">RUB</option>
+                        <option value="SAR">SAR</option>
+                        <option value="SEK">SEK</option>
+                        <option value="SGD">SGD</option>
+                        <option value="THB">THB</option>
+                        <option value="TRY">TRY</option>
+                        <option value="TWD">TWD</option>
+                        <option value="UAH">UAH</option>
+                        <option value="UYU">UYU</option>
+                        <option value="ZAR">ZAR</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center">
+
+            <!-- convert button -->
+            <button class="btn btn-primary convert m-2"
+                    type="submit">
+                Convertir
+            </button>
+
+            <!-- reset button -->
+            <button class="btn btn-primary m-2"
+                    onclick="clearVal()">
+                Resetear
+            </button>
+        </div>
+
+    </div>
+
+
+
+    <div id="finalAmount" class="text-center">
+
+        <!-- Display the converted amount -->
+        <h2>Cantidad convertida :
+            <span class="finalValue">
+           </span>
+        </h2>
+    </div>
+</div>
+
+<!-- linking script.js file -->
+<div style="display: none;" id="grafica" class="container">
+
+    <button  id="boton1" class="btn btn-dark  convert m-2"  type="submit " onclick="dibujarPlot()" >Ver el valor del Euro</button>
+    <div id="myPlot" style="display:none"></div>
+</div>
+
+<script src="api.js"></script>
+
+
+
+¡
+
+<!-- Footer -->
+<footer class="text-center text-lg-start bg-dark text-white">
+
+    <section class="">
+        <div class="container text-center text-md-start mt-5 pt-5">
+            <!-- Grid row -->
+            <div class="row mt-3">
+                <!-- Grid column -->
+                <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                    <!-- Content -->
+                    <h6 class="text-uppercase fw-bold mb-4">
+                        <i class="fas fa-gem me-3"></i>Meliá
+                    </h6>
+                    <p>
+                        Meliá Hotels International es el único entre los veinte mayores grupos hoteleros internacionales con un origen vacacional y con el tamaño ideal para combinar una excepcional hospitalidad con una gestión eficiente y cercana a sus stakeholders. Todo esto, unido a nuestra calidez y pasión españolas, nos hace únicos y diferentes.
+                    </p>
+                </div>
+                <!-- Grid column -->
+
+                <!-- Grid column -->
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                    <!-- Links -->
+                    <h6 class="text-uppercase fw-bold mb-4">
+                        Reservas
+                    </h6>
+                    <p>
+                        <a href="https://www.melia.com/booking/checkin/C_Public_CheckIn.jsp" class="text-reset">Check-in online</a>
+                    </p>
+                    <p>
+                        <a href="https://melia-es.lastminute.com/" class="text-reset">Vuelo+Hotel</a>
+                    </p>
+                    <p>
+                        <a href="https://www.melia.com/nMenus/jsp/telefonosOtrosPaises.jsp" class="text-reset">Realiza tu reserva telefonica</a>
+                    </p>
+                </div>
+                <!-- Grid column -->
+
+                <!-- Grid column -->
+                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                    <!-- Links -->
+                    <h6 class="text-uppercase fw-bold mb-4">
+                        Sobre Nosotros
+                    </h6>
+                    <p>
+                        <a href="historia.html" class="text-reset">¿Quienes somos?</a>
+                    </p>
+                    <p>
+                        <a href="cuestionario.html" class="text-reset">Trabaja con nosotros</a>
+                    </p>
+                    <p>
+                        <a href="https://landings.melia.com/es/emea/earlybooking2021.html" class="text-reset">Rebajas</a>
+                    </p>
+                    <p>
+                        <a href="https://www.melia.com/es" class="text-reset">Página oficial</a>
+                    </p>
+                </div>
+                <!-- Grid column -->
+
+                <!-- Grid column -->
+                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                    <!-- Links -->
+                    <h6 class="text-uppercase fw-bold mb-4">
+                        Contacto
+                    </h6>
+                    <p><i class="fas fa-home me-3"></i> C/ Alberto Aguilera, 25</p>
+                    <p>
+                        <i class="fas fa-envelope me-3"></i>
+                        <a class="text-reset" href="mailto:201900561@alu.comillas.edu>201900561@alu.comillas.edu"> email </a>
+                    </p>
+                    <p><i class="fas fa-phone me-3"></i> + 34 616 38 16 28</p>
+                    <p><i class="fas fa-print me-3"></i> + 34 91 715 65 55</p>
+                </div>
+                <!-- Grid column -->
+            </div>
+            <!-- Grid row -->
+        </div>
+    </section>
+    <!-- Section: Links  -->
+
+    <!-- Copyright -->
+    <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+        © 2021 Copyright:
+        <a class="text-reset fw-bold" href="https://www.melia.com/es">Melia.com</a>
+    </div>
+    <!-- Copyright -->
+</footer>
+<!-- Footer -->
+
+
+</body>
+</html>
